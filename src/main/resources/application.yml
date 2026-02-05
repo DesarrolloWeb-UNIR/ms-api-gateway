@@ -19,6 +19,12 @@ spring:
             - Path=/payments/**
           filters:
             - RewritePath=/payments/(?<segment>.*), /${segment}
+        - id: catalogue-service
+          uri: lb://ms-books-catalogue
+          predicates:
+            - Path=/catalogue/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:
