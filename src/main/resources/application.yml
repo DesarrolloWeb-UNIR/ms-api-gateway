@@ -16,7 +16,7 @@ spring:
             allowedOrigins:
               - "http://localhost:5173"
               - "http://localhost:3000"
-              - "https://relatosdepapel-h4e61l9wt-camilo-camargo-oliveros-projects.vercel.app/"
+              - "https://relatosdepapel-h4e61l9wt-camilo-camargo-oliveros-projects.vercel.app"
             allowedMethods:
               - GET
               - POST
