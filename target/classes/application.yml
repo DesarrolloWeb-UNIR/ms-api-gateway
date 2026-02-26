@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8080}
+  port: 8080
 
 spring:
   application:
@@ -16,7 +16,6 @@ spring:
             allowedOrigins:
               - "http://localhost:5173"
               - "http://localhost:3000"
-              - "https://relatosdepapel-h4e61l9wt-camilo-camargo-oliveros-projects.vercel.app/"
             allowedMethods:
               - GET
               - POST
@@ -49,12 +48,12 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: https://ms-eureka-server-production.up.railway.app/eureka/
+      defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
 
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
 
 management:
   endpoints:
