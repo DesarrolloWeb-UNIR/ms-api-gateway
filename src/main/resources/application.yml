@@ -18,8 +18,6 @@ spring:
               - "http://localhost:3000"
               - "https://relatosdepapel-h4e61l9wt-camilo-camargo-oliveros-projects.vercel.app"
               - "https://relatosdepapel-pi.vercel.app"
-              - "https://ms-books-payments-production-e152.up.railway.app"
-              - "https://ms-books-catalogue-production-f085.up.railway.app"
             allowedMethods:
               - GET
               - POST
