@@ -32,19 +32,19 @@ spring:
           lower-case-service-id: true
 
       routes:
-        - id: payments-service
-          uri: lb://ms-books-payments
-          predicates:
-            - Path=/payments/**
-          filters:
-            - RewritePath=/payments/(?<segment>.*), /${segment}
-
         - id: catalogue-service
-          uri: lb://ms-books-catalogue
+          uri: https://ms-books-catalogue-production-f085.up.railway.app
           predicates:
             - Path=/catalogue/**
           filters:
             - StripPrefix=1
+      
+        - id: payments-service
+          uri: https://ms-books-payments-production-e152.up.railway.app
+          predicates:
+            - Path=/payments/**
+          filters:
+            - RewritePath=/payments/(?<segment>.*), /${segment}
 
 eureka:
   client:
